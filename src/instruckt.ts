@@ -916,10 +916,11 @@ export class Instruckt {
     }
 
     for (const [path, annotations] of byPage) {
+      const pageUrl = annotations[0]?.url ?? path
       if (multiPage) {
-        lines.push(`## ${path}`)
+        lines.push(`## ${pageUrl}`)
       } else {
-        lines.push(`# UI Feedback: ${path}`)
+        lines.push(`# UI Feedback: ${pageUrl}`)
       }
       lines.push('')
 
